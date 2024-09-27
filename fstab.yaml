@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://localhost:4502/bin/franklin.delivery/websstone/aem-eds-test/main"
+    url: "https://author-p130360-e1272151.adobeaemcloud.com/bin/franklin.delivery/adobe-rnd/aem-boilerplate-xwalk/main"
     type: "markup"
     suffix: ".html"
