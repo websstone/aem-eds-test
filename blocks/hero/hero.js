@@ -2,7 +2,7 @@ import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 /**
- * loads and decorates the footer
+ * loads and decorates the header
  * @param {Element} block The footer block element
  */
 export default async function decorate(block) {
@@ -16,4 +16,5 @@ export default async function decorate(block) {
   row = block.firstElementChild;
   row.classList.add('hero-body');
   row.children[0].classList.add('hero-content');
+  row.children[0].firstElementChild.style.color = 'green';
 }
