@@ -1,6 +1,6 @@
 // import { getMetadata } from '../../scripts/aem.js';
 // import { loadFragment } from '../fragment/fragment.js';
-import { Button } from '../button/button.js';
+import Button from '../button/button.js';
 
 /**
  * loads and decorates the header
