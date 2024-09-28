@@ -13,7 +13,7 @@ export default class Button {
 
   render(excludeStyles) {
     if (!excludeStyles) {
-      loadCSS(`${window.hlx.codeBasePath}/libs/button/button.css`);
+      loadCSS(`${window.hlx.codeBasePath}/blocks/button/button.css`);
     }
     const btn = div(
       { class: 'button-wrapper' },
