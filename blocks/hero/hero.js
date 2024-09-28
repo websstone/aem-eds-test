@@ -16,5 +16,5 @@ export default async function decorate(block) {
   row = block.firstElementChild;
   row.classList.add('hero-body');
   row.children[0].classList.add('hero-content');
-  row.children[0].firstElementChild.style.color = 'green';
+  row.children[0].firstElementChild.style.color = 'yellow';
 }
