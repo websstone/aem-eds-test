@@ -5,10 +5,10 @@ import { render } from 'preact-render-to-string';
 // function App(props) {
 //   return `<h1>Hello ${props.name}!</h1>`;
 // }
-import { html, Component } from 'htm/preact';
+import { html, Component } from 'htm';
 
-const Header = ({ name }) => html`<h1>${name} List</h1>`
-const Footer = props => html`<footer ...${props} />`
+const Header = ({ name }) => html`<h1>${name} List</h1>`;
+const Footer = (props) => html`<footer ...${props} />`;
 
 class App extends Component {
   addTodo() {
@@ -21,7 +21,7 @@ class App extends Component {
           <div class="app">
             <${Header} name="ToDo's (${page})" />
             <ul>
-              ${todos.map(todo => html`
+              ${todos.map((todo) => html`
                 <li key=${todo}>${todo}</li>
               `)}
             </ul>
