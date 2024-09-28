@@ -1,19 +1,15 @@
 // import { getMetadata } from '../../scripts/aem.js';
 // import { loadFragment } from '../fragment/fragment.js';
-import { h } from 'preact';
 import { render } from 'preact-render-to-string';
-
-
-/**
- * loads and decorates the header
- * @param {Element} block The footer block element
- */
-
 
 function App(props) {
   return `<h1>Hello ${props.name}!</h1>`;
 }
 
+/**
+ * loads and decorates the header
+ * @param {Element} block The footer block element
+ */
 export default async function decorate(block) {
   let row = block.firstElementChild;
   const bg = row.querySelector('picture');
