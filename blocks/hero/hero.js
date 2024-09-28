@@ -23,8 +23,8 @@ export default async function decorate(block) {
   row.children[0].classList.add('hero-content');
   row.children[0].firstElementChild.style.color = 'yellow';
 
-  const html = render(
-    <App name="World" />
-  );
-  row.append(html);
+  // const html = render(
+  //   <App name="World" />
+  // );
+  // row.append(html);
 }
