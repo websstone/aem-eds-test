@@ -6,15 +6,13 @@ import { loadFragment } from '../fragment/fragment.js';
  * @param {Element} block The footer block element
  */
 export default async function decorate(block) {
-  // load footer as fragment
-  const headerMeta = getMetadata('header');
-  const headerPath = navMeta ? new URL(headerMeta, window.location).pathname : '/nav';
-  const fragment = await loadFragment(headerPath);
+  let row = block.firstElementChild;
+  const bg = row.querySelector('picture');
+  block.append(bg);
+  row.remove();
+  const bgP = block.closest('p');
+  if (bgP) bgP.remove();
 
-  block.textContent = '';
-  const nav = document.createElement('div');
-  while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
-  nav.append("<span>Hero</span>");
-
-  block.append(nav);
+  row = block.firstElementChild;
+  row.classList.add('hero-body');
 }
