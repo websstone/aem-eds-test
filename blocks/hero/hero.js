@@ -1,14 +1,15 @@
 // import { getMetadata } from '../../scripts/aem.js';
 // import { loadFragment } from '../fragment/fragment.js';
 import { render } from 'preact-render-to-string';
+import { Component, h } from 'preact';
 //
 // function App(props) {
 //   return `<h1>Hello ${props.name}!</h1>`;
 // }
-import { html, Component } from 'htm';
+// import { html } from 'htm';
 
-const Header = ({ name }) => html`<h1>${name} List</h1>`;
-const Footer = (props) => html`<footer ...${props} />`;
+const Header = ({ name }) => h`<h1>${name} List</h1>`;
+const Footer = (props) => h`<footer ...${props} />`;
 
 class App extends Component {
   addTodo() {
@@ -17,11 +18,11 @@ class App extends Component {
   }
 
   render({ page }, { todos = [] }) {
-    return html`
+    return h`
           <div class="app">
             <${Header} name="ToDo's (${page})" />
             <ul>
-              ${todos.map((todo) => html`
+              ${todos.map((todo) => h`
                 <li key=${todo}>${todo}</li>
               `)}
             </ul>
@@ -54,7 +55,7 @@ export default async function decorate(block) {
   // );
   let err = 'empty';
   try {
-    err = render(html`
+    err = render(h`
       <${App} page="Home"/>`);
   } catch (error) {
     err = error;
