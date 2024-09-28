@@ -52,6 +52,14 @@ export default async function decorate(block) {
   // const html = render(
   //   <App name="World" />
   // );
-  const htmlOut = render(html`<${App} page="Home" />`);
-  block.append(htmlOut);
+  let err = '';
+  try {
+    render(html`
+      <${App} page="Home"/>`);
+  } catch (error) {
+    err = error;
+  }
+  const hamburger = document.createElement('div');
+  hamburger.innerHTML = err;
+  block.append(hamburger);
 }
