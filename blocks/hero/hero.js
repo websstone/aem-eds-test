@@ -1,10 +1,10 @@
 // import { getMetadata } from '../../scripts/aem.js';
 // import { loadFragment } from '../fragment/fragment.js';
-import { render } from 'preact-render-to-string';
-
-function App(props) {
-  return `<h1>Hello ${props.name}!</h1>`;
-}
+// import { render } from 'preact-render-to-string';
+//
+// function App(props) {
+//   return `<h1>Hello ${props.name}!</h1>`;
+// }
 
 /**
  * loads and decorates the header
