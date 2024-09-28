@@ -2,16 +2,16 @@
 // import { loadFragment } from '../fragment/fragment.js';
 import { h } from 'preact';
 import { render } from 'preact-render-to-string';
-import htm from 'https://esm.sh/htm';
+
 
 /**
  * loads and decorates the header
  * @param {Element} block The footer block element
  */
-const html = htm.bind(h);
+
 
 function App(props) {
-  return html`<h1>Hello ${props.name}!</h1>`;
+  return `<h1>Hello ${props.name}!</h1>`;
 }
 
 export default async function decorate(block) {
@@ -27,6 +27,6 @@ export default async function decorate(block) {
   row.children[0].classList.add('hero-content');
   row.children[0].firstElementChild.style.color = 'yellow';
 
-  render(html`<${App} name="World" />`, document.body);
+  const html = render(`<${App} name="World" />`, document.body);
   block.append(html);
 }
