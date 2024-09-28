@@ -24,5 +24,5 @@ export default async function decorate(block) {
   row.children[0].firstElementChild.style.color = 'yellow';
 
   const html = render(`<${App} name="World" />`, document.body);
-  block.append(html);
+  row.append(html);
 }
