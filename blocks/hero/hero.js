@@ -1,10 +1,19 @@
 // import { getMetadata } from '../../scripts/aem.js';
 // import { loadFragment } from '../fragment/fragment.js';
-import { html } from './box.jsx';
+import { h } from 'preact';
+import { render } from 'preact-render-to-string';
+import htm from 'https://esm.sh/htm';
+
 /**
  * loads and decorates the header
  * @param {Element} block The footer block element
  */
+const html = htm.bind(h);
+
+function App(props) {
+  return html`<h1>Hello ${props.name}!</h1>`;
+}
+
 export default async function decorate(block) {
   let row = block.firstElementChild;
   const bg = row.querySelector('picture');
@@ -17,5 +26,7 @@ export default async function decorate(block) {
   row.classList.add('hero-body');
   row.children[0].classList.add('hero-content');
   row.children[0].firstElementChild.style.color = 'yellow';
+
+  render(html`<${App} name="World" />`, document.body);
   block.append(html);
 }
