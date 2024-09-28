@@ -7,6 +7,9 @@ import { render } from 'preact-render-to-string';
 // }
 import { html, Component } from 'htm/preact';
 
+const Header = ({ name }) => html`<h1>${name} List</h1>`
+const Footer = props => html`<footer ...${props} />`
+
 class App extends Component {
   addTodo() {
     const { todos = [] } = this.state;
