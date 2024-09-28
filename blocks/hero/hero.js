@@ -1,10 +1,33 @@
 // import { getMetadata } from '../../scripts/aem.js';
 // import { loadFragment } from '../fragment/fragment.js';
-// import { render } from 'preact-render-to-string';
+import { render } from 'preact-render-to-string';
 //
 // function App(props) {
 //   return `<h1>Hello ${props.name}!</h1>`;
 // }
+import { html, Component } from 'htm/preact';
+
+class App extends Component {
+  addTodo() {
+    const { todos = [] } = this.state;
+    this.setState({ todos: todos.concat(`Item ${todos.length}`) });
+  }
+
+  render({ page }, { todos = [] }) {
+    return html`
+          <div class="app">
+            <${Header} name="ToDo's (${page})" />
+            <ul>
+              ${todos.map(todo => html`
+                <li key=${todo}>${todo}</li>
+              `)}
+            </ul>
+            <button onClick=${() => this.addTodo()}>Add Todo</button>
+            <${Footer}>footer content here<//>
+          </div>
+        `;
+  }
+}
 
 /**
  * loads and decorates the header
@@ -26,5 +49,6 @@ export default async function decorate(block) {
   // const html = render(
   //   <App name="World" />
   // );
-  // row.append(html);
+  const htmlOut = render(html`<${App} page="Home" />`);
+  row.append(htmlOut);
 }
