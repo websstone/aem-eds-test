@@ -1,4 +1,4 @@
-import { button, p, span } from '../../scripts/dom-builder.js';
+import { button, div, span } from '../../scripts/dom-builder.js';
 import { loadCSS, decorateIcons } from '../../scripts/aem.js';
 
 export default class Button {
@@ -15,7 +15,7 @@ export default class Button {
     if (!excludeStyles) {
       loadCSS(`${window.hlx.codeBasePath}/libs/button/button.css`);
     }
-    const btn = p(
+    const btn = div(
       { class: 'button-wrapper' },
       button(
         {

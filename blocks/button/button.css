@@ -21,4 +21,7 @@
             transform: scale(0.4) rotate(90deg);
         }
     }
+
+    margin: 0 auto;
+    width: fit-content;
 }
