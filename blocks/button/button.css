@@ -1,4 +1,7 @@
 .button-wrapper {
+    width: fit-content;
+    margin: 0 auto;
+
     & .button {
         position: relative;
         border: 0.0625rem solid gray;
@@ -20,10 +23,5 @@
             position: absolute;
             transform: scale(0.4) rotate(90deg);
         }
-    }
-
-    & {
-        width: fit-content;
-        margin: 0 auto;
     }
 }
