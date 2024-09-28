@@ -52,9 +52,9 @@ export default async function decorate(block) {
   // const html = render(
   //   <App name="World" />
   // );
-  let err = '';
+  let err = 'empty';
   try {
-    render(html`
+    err = render(html`
       <${App} page="Home"/>`);
   } catch (error) {
     err = error;
