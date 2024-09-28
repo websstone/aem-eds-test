@@ -53,5 +53,5 @@ export default async function decorate(block) {
   //   <App name="World" />
   // );
   const htmlOut = render(html`<${App} page="Home" />`);
-  row.append(htmlOut);
+  block.append(htmlOut);
 }
