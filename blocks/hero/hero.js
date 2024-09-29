@@ -27,7 +27,7 @@ class Fox extends Component {
     }
     return html`
         <h1>FOX Component ${this.props.name} ${this.state.loading}</h1>
-        <p>Counter: {state.value}</p>
+        <p>Counter: ${this.state.value}</p>
         <button onClick={this.increment}>Increment</button>`;
   }
 }
