@@ -1,6 +1,6 @@
 import { Component } from '../../scripts/preact.js';
 
-class Fox extends Component {
+export default class Fox extends Component {
   constructor(props) {
     super(props);
 
