@@ -26,20 +26,20 @@ class Fox extends Component {
  * loads and decorates the header
  * @param {Element} block The footer block element
  */
-export default async function decorate(block) {
-  let row = block.firstElementChild;
+export default async function decorate($block) {
+  let row = $block.firstElementChild;
   const bg = row.querySelector('picture');
-  block.append(bg);
+  $block.append(bg);
   row.remove();
-  const bgP = block.closest('p');
+  const bgP = $block.closest('p');
   if (bgP) bgP.remove();
 
-  row = block.firstElementChild;
+  row = $block.firstElementChild;
   row.classList.add('hero-body');
   row.children[0].classList.add('hero-content');
   row.children[0].firstElementChild.style.color = 'yellow';
 
   const name = 'Billy';
   const app = html`<${Fox} name=${name} />`;
-  render(app, block);
+  render(app, $block);
 }
