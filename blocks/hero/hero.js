@@ -1,7 +1,7 @@
 // import { getMetadata } from '../../scripts/aem.js';
 // import { loadFragment } from '../fragment/fragment.js';
-import htm from '../../scripts/htm.js';
 import { render, h } from '../../scripts/preact.js';
+import htm from '../../scripts/htm.js';
 import Fox from './box.js';
 
 const html = htm.bind(h);
