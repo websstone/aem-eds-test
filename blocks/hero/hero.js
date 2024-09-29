@@ -17,10 +17,10 @@ class Fox extends Component {
   }
 
   render() {
-    // if (this.state.loading) {
-    //   return htm`<div>Loading...</div>`;
-    // }
-    return htm`<h1>FOX Component ${this.state.loading}</h1>`;
+    if (this.state.loading) {
+      return htm`<div>Loading...</div>`;
+    }
+    return html`<h1>FOX Component ${this.props.name} ${this.state.loading}</h1>`;
   }
 }
 
