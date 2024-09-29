@@ -1,7 +1,7 @@
 // import { getMetadata } from '../../scripts/aem.js';
 // import { loadFragment } from '../fragment/fragment.js';
 import {
-  Component, Fragment, h, render,
+  Component, h, render,
 } from '../../scripts/preact.js';
 import htm from '../../scripts/htm.js';
 //
@@ -20,7 +20,7 @@ class Fox extends Component {
     // if (this.state.loading) {
     //   return htm`<div>Loading...</div>`;
     // }
-    return htm`<h1>FOX Component ${this.props.name} ${this.state.loading}</h1>`;
+    return htm`<h1>FOX Component ${this.state.loading}</h1>`;
   }
 }
 
