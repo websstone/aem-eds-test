@@ -1,9 +1,9 @@
 // import { getMetadata } from '../../scripts/aem.js';
 // import { loadFragment } from '../fragment/fragment.js';
-// import { render, h, Component } from '../../scripts/preact.js';
-// import htm from '../../scripts/htm.js';
+import { h } from '../../scripts/preact.js';
+import htm from '../../scripts/htm.js';
 //
-// const html = htm.bind(h);
+const html = htm.bind(h);
 //
 // class Fox extends Component {
 //   constructor(props) {
