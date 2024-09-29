@@ -18,7 +18,7 @@ class Fox extends Component {
 
   render() {
     if (this.state.loading) {
-      return htm`<div>Loading...</div>`;
+      return html`<div>Loading...</div>`;
     }
     return html`<h1>FOX Component ${this.props.name} ${this.state.loading}</h1>`;
   }
