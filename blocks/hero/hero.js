@@ -1,26 +1,26 @@
 // import { getMetadata } from '../../scripts/aem.js';
 // import { loadFragment } from '../fragment/fragment.js';
-import { render, h, Component } from '../../scripts/preact.js';
-import htm from '../../scripts/htm.js';
-
-const html = htm.bind(h);
-
-class Fox extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loading: true,
-    };
-  }
-
-  render() {
-    if (this.state.loading) {
-      return htm`<div>Loading...</div>`;
-    }
-    return htm`<h1>FOX Component ${this.props.name}</h1>`;
-  }
-}
+// import { render, h, Component } from '../../scripts/preact.js';
+// import htm from '../../scripts/htm.js';
+//
+// const html = htm.bind(h);
+//
+// class Fox extends Component {
+//   constructor(props) {
+//     super(props);
+//
+//     this.state = {
+//       loading: true,
+//     };
+//   }
+//
+//   render() {
+//     if (this.state.loading) {
+//       return htm`<div>Loading...</div>`;
+//     }
+//     return htm`<h1>FOX Component ${this.props.name}</h1>`;
+//   }
+// }
 
 /**
  * loads and decorates the header
@@ -39,7 +39,7 @@ export default async function decorate($block) {
   row.children[0].classList.add('hero-content');
   row.children[0].firstElementChild.style.color = 'yellow';
 
-  const name = 'Billy';
-  const app = html`<${Fox} name=${name} />`;
-  render(app, $block);
+  // const name = 'Billy';
+  // const app = html`<${Fox} name=${name} />`;
+  // render(app, $block);
 }
