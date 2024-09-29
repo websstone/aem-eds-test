@@ -13,14 +13,22 @@ class Fox extends Component {
 
     this.state = {
       loading: false,
+      value: 0,
     };
   }
+
+  increment = () => {
+    this.setState((prev) => ({ value: prev.value + 1 }));
+  };
 
   render() {
     if (this.state.loading) {
       return html`<div>Loading...</div>`;
     }
-    return html`<h1>FOX Component ${this.props.name} ${this.state.loading}</h1>`;
+    return html`
+        <h1>FOX Component ${this.props.name} ${this.state.loading}</h1>
+        <p>Counter: {state.value}</p>
+        <button onClick={this.increment}>Increment</button>`;
   }
 }
 
